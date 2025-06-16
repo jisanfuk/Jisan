@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Prediction App</title>
+    <style>
+        body {
+            background-color: #FFF88C;
+            text-align: center;
+            font-family: Arial;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        .input-box {
+            margin: 10px;
+            font-size: 24px;
+            padding: 8px;
+        }
+        .btn {
+            font-size: 22px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>📊 আগামী রাউন্ডে কী হবে?</h2>
+    <form method="post">
+        <input class="input-box" type="text" name="n1" placeholder="সংখ্যা ১ (BIG/SMALL)" required>
+        <input class="input-box" type="text" name="n2" placeholder="সংখ্যা ২ (BIG/SMALL)" required>
+        <input class="input-box" type="text" name="n3" placeholder="সংখ্যা ৩ (BIG/SMALL)" required>
+        <input class="input-box" type="text" name="n4" placeholder="সংখ্যা ৪ (BIG/SMALL)" required>
+        <br><br>
+        <button class="btn" type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h1 style="color: {{ color }};">👉 {{ prediction }} আসবে!</h1>
+    {% endif %}
+</body>
+</html>
